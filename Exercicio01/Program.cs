@@ -11,7 +11,7 @@ namespace Exercicio01
         {
             List<TaxPayer> payers = new List<TaxPayer>();
 
-            Console.Write("Enter the number of tax payers");
+            Console.Write("Enter the number of tax payers: ");
             int n = int.Parse(Console.ReadLine());
 
             for (int i = 1; i <= n; i++)
@@ -35,7 +35,7 @@ namespace Exercicio01
                 else
                 {
                     Console.Write("Health Expenditures: ");
-                    double healthExpenditures = double.Parse(Console.ReadLine());
+                    double healthExpenditures = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                     payers.Add(new Individual(name, anualIncome, healthExpenditures));
                 }
